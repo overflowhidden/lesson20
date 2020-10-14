@@ -1,0 +1,32 @@
+.footer {
+    height: 95px;
+    background: $block-wrapper-bg;
+}
+
+.footer-container {
+    padding-top: 39px;
+    .copyright {
+        font-size: 14px;
+        float: left;
+        color: $white;
+        @media (max-width: 991.98px) {
+            font-size: 12px;
+        }
+    }
+    .networks-footer {
+        float: right;
+        ul {
+            float: right;
+            margin: 0;
+            a {
+                padding-left: 11px;
+                @media (max-width: 991.98px) {
+                    padding-left: 9px;
+                }
+                &:before {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

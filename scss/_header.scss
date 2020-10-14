@@ -1,0 +1,144 @@
+@import "_mixins";
+.logo {
+    background: url(../../images/logo-modest2.png);
+    width: 110px;
+    height: 19px;
+}
+
+.header {
+    background: $header-color;
+    width: 100%;
+    .container {
+        padding-top: 24px;
+        @media (max-width: 993px) {
+            padding-top: 10px;
+        }
+        .navbar-nav {
+            margin-right: 40px;
+            @media (max-width: 993px) {
+                padding-top: 30px;
+            }
+            li {
+                @media (max-width: 993px) {
+                    padding-bottom: 30px;
+                }
+                &.active {
+                    a {
+                        color: $nav-active;
+                        border: 2px solid $nav-active;
+                        @media (max-width: 991.98px) {
+                            border: none;
+                            border-bottom: 2px solid $nav-active;
+                        }
+                        &:hover {
+                            @media (max-width: 991.98px) {
+                                border-bottom: 2px solid $nav-active;
+                            }
+                        }
+                    }
+                }
+                a {
+                    color: $nav-color;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border-bottom: 2px solid transparent;
+                    @include font-size(12px);
+                    padding: 0 10px;
+                    line-height: 26px;
+                    border-radius: 4px;
+                    margin-left: 16px;
+                    @media (max-width: 991.98px) {
+                        text-align: center;
+                        @include font-size(20px);
+                        font-size: 20px;
+                        line-height: 40px;
+                    }
+                    &:not(.active):hover {
+                        border: 2px solid $nav-border-color;
+                        @media (max-width: 992px) {
+                            border: none;
+                            border-bottom: 2px solid $nav-border-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-expand-lg {
+    padding: 0;
+    z-index: 100;
+    background: $header-color;
+    .navbar-toggler {
+        border: 1px solid $white;
+        &.focus {
+            border: none;
+        }
+        .burger-menu {
+            svg {
+                fill: $white;
+                width: 2.5rem;
+                height: 3rem;
+            }
+        }
+    }
+}
+
+.carousel-indicators {
+    justify-content: flex-end;
+    margin-right: 18%;
+    bottom: 16px;
+    @media (max-width: 991.98px) {
+        margin-right: 5%;
+    }
+    li {
+        border: 2px solid $white;
+        display: block;
+        border-radius: 50%;
+        width: 9px;
+        height: 9px;
+        background: none;
+        padding-left: 1px;
+    }
+    .active {
+        background: $white;
+    }
+}
+
+.carousel-caption {
+    max-width: 1140px;
+    text-align: left;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 70px;
+    bottom: 0;
+    height: 281px;
+    @media (max-width: 991.98px) {
+        left: 35px;
+    }
+    strong {
+        text-transform: uppercase;
+        font: 600 30px/73px 'Quattrocento Sans';
+    }
+    p {
+        color: #ccd0d7;
+        width: 60%;
+    }
+    .btn.focus,
+    .btn:focus {
+        box-shadow: none;
+    }
+    .btn-ocean {
+        font: 600 14px 'Quattrocento Sans';
+        text-transform: uppercase;
+        color: $white;
+        border: 2px solid $white;
+        margin-right: 9px;
+        &:hover {
+            background: $nav-active;
+            border: 2px solid $nav-active;
+        }
+    }
+}

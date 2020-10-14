@@ -1,0 +1,12 @@
+/*Rem Function*/
+
+@mixin font-size ($target, $context: $base-size) {
+    font-size: ($target/$context) * 1rem;
+}
+
+@mixin networks($content-social) {
+    content: $content-social;
+    font-size: 22px;
+    font-family: 'icomoon' !important;
+    color: $white;
+}
